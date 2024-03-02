@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Infinite Craft Recipe Extension",
+    "version": "1.0",
+    "description": "Allows you to export/import recipe files from/into local storage",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "downloads",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://neal.fun/*"
+            ],
+            "js": [
+                "content_script.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/craft-48.png"
+    },
+    "icons": {
+        "48": "icons/craft-48.png"
+    }
+}
