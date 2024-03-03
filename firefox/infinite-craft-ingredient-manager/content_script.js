@@ -1,5 +1,5 @@
 // Handle the dynamic file input and responding to file selection
-browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.action === "openFileInput") {
         let fileInput = document.createElement('input'); // Dynamically create an input tag and put it in the DOM
         fileInput.type = 'file';                         // Set the input to be a file selector
@@ -21,7 +21,7 @@ browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
                         localStorage.setItem('infinite-craft-data', JSON.stringify(data));
 
                         // Reload the page so the new data is loaded in the ingredients window
-                        browser.runtime.sendMessage({ action: "reloadTab" });
+                        chrome.runtime.sendMessage({ action: "reloadTab" });
                         sendResponse({ status: 'success', data: 'Data imported successfully.' });
                     } catch (error) {
                         console.error('Error in content script:', error);
