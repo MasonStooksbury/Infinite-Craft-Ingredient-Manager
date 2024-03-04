@@ -14,6 +14,9 @@ chrome.runtime.onMessage.addListener((message) => {
 
     // Reload page (after import)
     if (message.action === "reloadTab") {
-        chrome.tabs.reload(sender.tab.id);
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.reload(tabs[0].id);
+        });
+        
     }
 });
