@@ -21,9 +21,15 @@ To merge ingredient files from your friends into your own, you can use [this web
 
 # Supported Browsers
 - Firefox
-- Chrome (see notes below)
+- Chrome (If you side-load it. See notes below)
 
 <br><br>
 
 ## Notes
-This extension is using Manifest V2. Chrome is about to deprecate this in favor of V3 in June 2024, while Firefox has decided to support V2 for the forseeable future. Because of this, the extension will work in Chrome until that date (hopefully I'll get around to converting it before then)
+This extension is using Manifest V2. Chrome is about to deprecate this in favor of V3 in June 2024, while Firefox has decided to support V2 for the forseeable future. Because of this, the extension will work in Chrome - if you side-load it - until that date (hopefully I'll get around to converting it before then)
+
+<br><br>
+
+## Side-loading into Chrome
+- Download this repo
+- Follow the instructions [here](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
